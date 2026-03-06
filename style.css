@@ -1,0 +1,251 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+    scrollbar-width: none;
+    
+}
+
+main {
+    /* Hide main menu when game starts */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.box{
+    width: 80%;
+    height: 80%;
+    background-image: linear-gradient(rgb(141, 228, 228), rgb(219, 23, 177));
+    border: 3px dashed black;
+    border-radius: 10px;
+    align-content: center;
+    justify-items: center;
+}
+.box > h1{
+    font-size: 70px;
+    font-weight: 600;
+    color: black;
+}
+.box > h4{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding: 40px;
+    color: rgb(215, 245, 81);
+}
+.box > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+    background-image: linear-gradient(rgb(126, 236, 126), rgb(58, 161, 10));
+    color: white;
+}
+.box > button:active{
+    scale: 0.95;
+}
+
+@keyframes opac {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.game{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    padding: 10px;
+    visibility: hidden;
+    transform: translate(0, -100%);
+    transition: transform 0.5s ease, visibility 0.5s ease;
+    display: flex;
+    font-size: 20px;
+    gap: 5px;
+    z-index: 10;
+}
+.game > #left {
+    width: 15%;
+    border: 3px double blueviolet;
+}
+.game > #left > #lives > #text{
+    text-align: center;
+    padding: 10px;
+    border-bottom: 3px double blueviolet;
+}
+.game > #left > #score > #text{
+    text-align: center;
+    padding: 10px;
+    border-bottom: 3px double blueviolet;
+}
+.game > #left > #point{
+    padding-top: 10px;
+}
+.game > #left > #point > table > caption{ 
+    width: 100%;
+    padding-top: 10px;
+}
+.game > #left > #point > table{
+    border-spacing: 5px 5px;
+    padding-top: 10px;
+}
+.game > #left > #point > table tr{
+    padding-bottom: 10px;
+}
+.game > #left > #point > table tr td{
+    padding: 0 10px;
+    border-radius: 50%;
+    color: rgb(24, 231, 24);
+}
+
+
+.game > #cloud{
+    width: 85%;
+    z-index: 20;
+    border: 4px solid rgb(190, 121, 255);
+    padding: 0 7px;
+    background-image: url(wolfgang-hasselmann-VVDHFsE5zGQ-unsplash.jpg);
+    background-size: 100%;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    gap: 6px;
+    
+}
+#cloud .p{
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: translate(0, -100%);
+}
+#cloud .p div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    text-align: center;
+    padding-top: 25%;
+    color: gold;
+    font-size: 25px;
+    animation: down linear 1s;
+    position: absolute;
+}
+#cloud .p div:active{
+    font-size: 30px;
+}
+
+.game #setting{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid black;
+    right: 10px;
+    z-index: 30;
+}
+
+
+@keyframes down {
+    0%{
+        transform: translate(0, 0%);
+    }
+    100%{
+        transform: translate(0, 1230%);
+    }
+}
+
+@keyframes up {
+    0%{
+        transform: translate(0, 1230%);
+    }
+    100%{
+        transform: translate(0, 1180%);
+    }
+}
+
+.again{
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+.again #boxAgain{
+    height: 400px;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.404);
+    box-shadow: 1px 1px 3px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.again #boxAgain:hover{
+    scale: 1.03;
+    transition-duration: 0.5s;
+}
+.again #boxAgain h1{
+    font-size: 70px;
+    font-weight: 700;
+    font-family: Helvetica;
+}
+.again #boxAgain h2{
+    font-size: 30px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+.again #boxAgain #butdiv{
+    justify-content: space-between;
+    display: flex;
+    gap: 15px;
+}
+.again #boxAgain #butdiv button{
+    width: 130px;
+    padding: 8px 23px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 1px 1px 3px cyan;
+    border: 1px solid rgba(0, 255, 255, 0.377);
+}
+.again #boxAgain #butdiv button:hover{
+    scale: 1.05;
+}
+
+
+
+
+
+
+

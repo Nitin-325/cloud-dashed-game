@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Dashed Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="box">
+            <h1>Cloud Dashed Game</h1>
+            <h4>Click on cloud for Gain the points<br>Click on Gain points Cloud to save the 1 Lives<br>Gain Point Cloud is Fall on groud 1 Lives is Lose</h4>
+            <button>Play Game</button>
+        </div>
+    </main>
+    <div class="game">
+        <div id="left">
+            <div id="lives">
+                <div id="text">Lives : <span>10</span></div>
+            </div>
+            <div id="score">
+                <div id="text">Score : <span>0</span></div>
+            </div>
+            <div id="point" style="text-align: center;">Points Table
+                <table>
+                    <hr style="border-top: 3px double blueviolet; margin: 10px 0;">
+                    <caption style="color: rgb(24, 231, 24); text-shadow: 1px 1px 1px rgb(24, 231, 24);">Gain Points</caption>
+                    <tr>
+                        <td style="background-color: yellow"></td>
+                        <td>Yellow</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: green"></td>
+                        <td>Green</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: blue"></td>
+                        <td>Blue</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: royalblue"></td>
+                        <td>Royalblue</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: orange"></td>
+                        <td>Orange</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: cyan"></td>
+                        <td>Cyan</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: pink"></td>
+                        <td>Pink</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+                <table>
+                    <hr style="border-top: 3px double blueviolet; margin: 10px 0;">
+                    <caption style="color: rgb(231, 24, 24); text-shadow: 1px 0px 1px rgb(231, 24, 24);">Lose Points</caption>
+                    <tr>
+                        <td style="background-color: black"></td>
+                        <td>Black</td>
+                        <td>-20</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: red"></td>
+                        <td>Red</td>
+                        <td>-20</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: purple"></td>
+                        <td>Purple</td>
+                        <td>-10</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: blueviolet"></td>
+                        <td>Blueviolet</td>
+                        <td>-10</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="cloud">
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+            <div class="p"></div>
+        </div>
+        <div id="setting"></div>
+    </div>
+
+    <div class="again">
+        <div id="boxAgain">
+            <h1>GAME OVER</h1>
+            <h2>Score : <span></span></h2>
+            <div id="butdiv">
+                <button id="new">Play Again</button>
+                <button id="resume">Resume</button>
+                <button id="exit">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
